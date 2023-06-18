@@ -66,7 +66,7 @@ namespace Labb7XUnitTests
         [InlineData("3", 100, 5)]
         [InlineData("4", 20, 2)]
         [InlineData("0", 5, 10)]
-        public void AddCalculationsToList(string choice, double n1, double n2)
+        public void AddCalculationToList_CheckIfCalculationInList(string choice, double n1, double n2)
         {
             char operation = Labb7XUnit.Calculator.GetOperationSymbol(choice);
             double result = Labb7XUnit.Program.RunMethod(choice, n1, n2);
