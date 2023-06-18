@@ -5,7 +5,7 @@ Test 1:
 3. Välj Multiplikation genom att skriva in siffran 4 och tryck på enter
 4. Skriv in siffran 5 och tryck på enter
 5. Skriv in siffran -5 och tryck på enter
-Förväntat resultat: Programmet skriver ut både uträkningen och resultatet 5 * -5 = -25
+6. Förväntat resultat: Programmet skriver ut både uträkningen och resultatet 5 * -5 = -25
 
 Test 2:
 1. Öppna programmet
@@ -13,7 +13,7 @@ Test 2:
 3. Välj Division genom att skriva in siffran 3 och tryck på enter
 4. Skriv in siffran 100 och tryck på enter
 5. Skriv in siffran 0 och tryck på enter
-Förväntat resultat: Programmet skriver ut att du inte kan dela ett tal med 0 och att uträkningen inte genomfördes
+6. Förväntat resultat: Programmet skriver ut att du inte kan dela ett tal med 0 och att uträkningen inte genomfördes
 
 Test 3:
 1. Öppna programmet
@@ -28,4 +28,4 @@ Test 3:
 10. Skriv in siffran -10 och tryck på enter
 11. Tryck på enter för att återvända till huvudmenyn
 12. Välj Visa tidiagre beräkningar genom att skriva in siffran 2 och tryck på enter
-Förväntat resultat: Programmet skriver ut de två uträkningarna användaren precis utförde i ordningen de utfördes
+13. Förväntat resultat: Programmet skriver ut de två uträkningarna användaren precis utförde i ordningen de utfördes
