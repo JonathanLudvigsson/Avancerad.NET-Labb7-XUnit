@@ -74,8 +74,17 @@ namespace Labb7XUnitTests
             bool AddedToList = Labb7XUnit.Calculator.CreateResult(choice, n1, n2, result);
             string expected = $"{n1}{operation}{n2} = {result}";
 
-            Assert.True(AddedToList);
-            Assert.Contains(expected, Labb7XUnit.Calculator.calculations.Last());
+            if (Labb7XUnit.Calculator.CheckValidCalculation(choice))
+            {
+                Assert.True(AddedToList);
+                Assert.Contains(expected, Labb7XUnit.Calculator.calculations);
+            }
+            else
+            {
+                Assert.False(AddedToList);
+                Assert.DoesNotContain(expected, Labb7XUnit.Calculator.calculations);
+            }
+
         }
     }
 }
