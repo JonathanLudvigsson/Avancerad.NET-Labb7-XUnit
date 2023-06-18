@@ -71,9 +71,10 @@ namespace Labb7XUnitTests
             char operation = Labb7XUnit.Calculator.GetOperationSymbol(choice);
             double result = Labb7XUnit.Program.RunMethod(choice, n1, n2);
 
-            Labb7XUnit.Calculator.CreateResult(choice, n1, n2, result);
+            bool AddedToList = Labb7XUnit.Calculator.CreateResult(choice, n1, n2, result);
             string expected = $"{n1}{operation}{n2} = {result}";
 
+            Assert.True(AddedToList);
             Assert.Contains(expected, Labb7XUnit.Calculator.calculations.Last());
         }
     }
