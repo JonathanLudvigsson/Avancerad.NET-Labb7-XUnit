@@ -60,5 +60,21 @@ namespace Labb7XUnitTests
 
             Assert.Equal(expected, actual);
         }
+        [Theory]
+        [InlineData("1", 5, 10)]
+        [InlineData("2", 3, 6)]
+        [InlineData("3", 100, 5)]
+        [InlineData("4", 20, 2)]
+        [InlineData("0", 5, 10)]
+        public void AddCalculationsToList(string choice, double n1, double n2)
+        {
+            char operation = Labb7XUnit.Calculator.GetOperationSymbol(choice);
+            double result = Labb7XUnit.Program.RunMethod(choice, n1, n2);
+
+            Labb7XUnit.Calculator.CreateResult(choice, n1, n2, result);
+            string expected = $"{n1}{operation}{n2} = {result}";
+
+            Assert.Contains(expected, Labb7XUnit.Calculator.calculations.Last());
+        }
     }
 }

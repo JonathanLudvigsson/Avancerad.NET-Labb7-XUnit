@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Labb7XUnit
 {
@@ -34,16 +35,17 @@ namespace Labb7XUnit
             return n1 * n2;
         }
 
-        public static void CreateResult(string choice, double n1, double n2, double result)
+        public static bool CreateResult(string choice, double n1, double n2, double result)
         {
             char operation = GetOperationSymbol(choice);
-            if (CheckDivideZero(choice, n2))
+            if (CheckDivideZero(choice, n2) || !CheckValidCalculation(choice))
             {
-                return;
+                return false;
             }
             else
             {
                 calculations.Add($"{n1}{operation}{n2} = {result}");
+                return true;
             }
         }
 
@@ -72,6 +74,11 @@ namespace Labb7XUnit
         public static bool CheckDivideZero(string choice, double n2)
         {
             return choice == "3" && n2 == 0;
+        }
+
+        public static bool CheckValidCalculation(string choice)
+        {
+            return choice == "1" || choice == "2" || choice == "3" || choice == "4";
         }
     }
 }
