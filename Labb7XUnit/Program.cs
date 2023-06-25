@@ -62,6 +62,7 @@
 
         static void ViewPreviousCalculations()
         {
+            Console.Clear();
             if (Calculator.calculations.Count == 0)
             {
                 Console.WriteLine("Inga beräkningar har utförts än");
